@@ -614,7 +614,7 @@ public class PaperweightGetBlocks extends AbstractBukkitGetBlocks<ServerLevel, L
                     for (BlockEntity beacon : finalBeacons) {
                         BeaconBlockEntity.playSound(beacon.getLevel(), beacon.getBlockPos(), SoundEvents.BEACON_DEACTIVATE);
                         new BeaconDeactivatedEvent(CraftBlock.at(beacon.getLevel(), beacon.getBlockPos())).callEvent();
-                        PaperweightPlatformAdapter.removeBeacon(tile, nmsChunk);
+                        PaperweightPlatformAdapter.removeBeacon(beacon, nmsChunk);
                     }
                 });
             }
